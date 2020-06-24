@@ -11,6 +11,19 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UserSeeder::class);
+        // Origin data
+        $this->call(AccountSeeder::class);
+        $this->call(UserSeeder::class);
+
+        // HT data
+        /*
+        $this->call(SiteSeeder::class);
+        $this->call(BuildingSeeder::class);
+        $this->call(BlockSeeder::class);
+        $this->call(RoomSeeder::class);
+        */
+
+        // Fake data
+        $this->call(FakeSeeder::class);
     }
 }
